@@ -40,7 +40,6 @@ const navbar = (
             <li>Pricing</li>
             <li>About</li>
             <li>Contact</li>
-            <li>Hello there</li>
         </ul>
     </nav>
 );
