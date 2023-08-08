@@ -15,7 +15,7 @@ function Header() {
 	return (
 		<header>
 			<nav>
-				<img src={ReactLogo} width="50px" />
+				<img src={ReactLogo} width="50px" alt="React logo"/>
 			</nav>
 		</header>
 	);
