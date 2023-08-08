@@ -4,22 +4,37 @@ import ReactLogo from "./assets/react.svg";
 /**
 Challenge: 
 
-Part 1: Create a page of your own using a custom Page component
-
-It should return an ordered list with the reasons why you're
-excited to be learning React :)
-
-Render your list to the page
-
+- Move the `header` element from Page into 
+its own component called "Header"
+- Move the `footer` into its own component called "Footer" 
+and render that component inside the Page component.
+- Move the `h1` and `ol` together into another component 
+called "MainContent" and render inside Page as well.
 */
+function Header() {
+	return (
+		<header>
+			<nav>
+				<img src={ReactLogo} width="50px" />
+			</nav>
+		</header>
+	);
+}
 
-function App() {
+function Footer() {
+	return (
+		<footer>
+			<small>© 2021 Ziroll development. All rights reserved.</small>
+		</footer>
+	);
+}
+
+function MainContent() {
 	return (
 		<>
-			<img src={ReactLogo} alt="" />
 			<h1>Reasons I love React</h1>
 			<ol>
-				<li>It is simple to use compared to .html</li>
+				<li>{"It's simple to use compared to .html"}</li>
 				<li>Makes the project easily mainainable</li>
 				<li>React introduces reusable components</li>
 			</ol>
@@ -27,4 +42,14 @@ function App() {
 	);
 }
 
-export default App;
+// App component is the parent component
+// Header, MainContent and Footer are the children components
+export default function App() {
+	return (
+		<>
+			<Header />
+			<MainContent />
+			<Footer />
+		</>
+	);
+}
