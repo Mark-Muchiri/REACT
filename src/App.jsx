@@ -4,18 +4,24 @@ import ReactLogo from "./assets/react.svg";
 /**
 Challenge: 
 
-- Move the `header` element from Page into 
-its own component called "Header"
-- Move the `footer` into its own component called "Footer" 
-and render that component inside the Page component.
-- Move the `h1` and `ol` together into another component 
-called "MainContent" and render inside Page as well.
+- Add an `ul` inside the Header's `nav` and create
+the following `li`s: "Pricing", "About", & "Contact"
+- Using flexbox, line up the nav items horizontally, and
+put them inline with the React logo.
+- Change the image styling to happen in CSS instead of in-line
+For practice, add a new class to the image in order to style it
 */
+
 function Header() {
 	return (
-		<header>
-			<nav>
-				<img src={ReactLogo} width="50px" alt="React logo"/>
+		<header className="navshadow">
+			<nav className="nav">
+				<img className="logo" src={ReactLogo} />
+				<ul className="nav-items">
+					<li>Pricing</li>
+					<li>About</li>
+					<li>Contact</li>
+				</ul>
 			</nav>
 		</header>
 	);
@@ -23,22 +29,26 @@ function Header() {
 
 function Footer() {
 	return (
-		<footer>
-			<small>© 2021 Ziroll development. All rights reserved.</small>
+		<footer className="footer">
+			<small className="small">
+				© 2021 Muchiri development. All rights reserved.
+			</small>
 		</footer>
 	);
 }
 
 function MainContent() {
 	return (
-		<>
-			<h1>Reasons I love React</h1>
-			<ol>
-				<li>{"It's simple to use compared to .html"}</li>
-				<li>Makes the project easily mainainable</li>
-				<li>React introduces reusable components</li>
-			</ol>
-		</>
+		<div className="MainContent">
+			<div>
+				<h1>{"Reasons I'm excited to learn React"}</h1>
+				<ol>
+					<li>{"It's simple to use compared to .html"}</li>
+					<li>Makes the project easily mainainable</li>
+					<li>React introduces reusable components</li>
+				</ol>
+			</div>
+		</div>
 	);
 }
 
