@@ -15,10 +15,12 @@
   padding-right: 10px;
   padding-bottom: 10px;
   padding-top: 5px;
+  background-color: #0a0a0f;
   box-shadow: 0 0.4rem 1rem rgb(10, 10, 10);
 }
 
 .logo {
+  background-color: #0a0a0f;
   width: 60px;
 }
 
@@ -29,6 +31,11 @@
   margin-right: 2rem;
   align-items: center;
   gap: 15px;
+  background-color: #0a0a0f;
+}
+
+.navlist{
+  background-color: #0a0a0f;
 }
 
 .MainContent {
@@ -49,10 +56,10 @@
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
-
   background-color: #0b0b0f;
 }
 
 .small {
-  background-color: #0b0b0f;
+  background-color: #0a0a0f;
+
 }
