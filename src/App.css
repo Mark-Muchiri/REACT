@@ -9,6 +9,8 @@ body {
   font-family: Inter, sans-serif;
 }
 
+/* Nav container */
+
 .nav {
   background: #21222A;
   display: flex;
@@ -42,3 +44,13 @@ body {
   color: #DEEBF8;
   font-weight: 600;
 }
+
+/* Main container */
+
+.maincontainer {
+  margin-left: 2rem;
+}
+
+.maintitle {}
+
+.mainfacts {}
