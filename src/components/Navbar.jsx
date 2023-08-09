@@ -1,4 +1,4 @@
-import reacticon from "../../public/reactjs-icon.svg";
+import reacticon from "../assets/reactjs-icon.svg";
 export default function Navbar() {
 	return (
 		<div className="nav">
