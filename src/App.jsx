@@ -1,4 +1,6 @@
 import "./App.css";
+import Main from "./components/Main";
+import Navbar from "./components/Navbar";
 
 /**
 Challenge: Project setup
@@ -25,7 +27,8 @@ works if you haven't done it before)
 export default function App() {
 	return (
 		<>
-			<p>Hello there</p>
+			<Navbar />
+			<Main />
 		</>
 	);
 }

@@ -1,4 +1,44 @@
 * {
-  background-color: #16171d;
+  background: #282D35;
+  box-sizing: border-box;
   color: white;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+.nav {
+  background: #21222A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logo {
+  background: #21222A;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 90px;
+}
+
+.logotext {
+  background: #21222A;
+  color: #61DAFB;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.listsection {
+  background-color: #21222A;
+}
+
+.navlist {
+  background-color: #21222A;
+  color: #DEEBF8;
+  font-weight: 600;
 }
