@@ -47,10 +47,27 @@ body {
 
 /* Main container */
 
-.maincontainer {
-  margin-left: 2rem;
+main {
+  padding: 57px 27px;
 }
 
-.maintitle {}
+.maintitle {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05rem;
+}
 
-.mainfacts {}
+.mainfacts {
+  margin-top: 46px;
+  max-width: 400px;
+}
+
+.mainfacts > li {
+  line-height: 19px;
+  padding-block: 10px;
+}
+
+.mainfacts > li::marker {
+  color: #61DAFB;
+  font-size: 1.4rem;
+}
