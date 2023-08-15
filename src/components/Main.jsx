@@ -1,5 +1,3 @@
-import reactback from "../assets/react-icon-large.png"
-
 export default function Main() {
     return (
         <main>
@@ -11,7 +9,6 @@ export default function Main() {
                 <li>Is maintained by Facebook</li>
                 <li>Powers thousands of enterprise apps, including mobile apps</li>
             </ul>
-            {/* <img src={reactback} alt="" /> */}
         </main>
     )
 }
