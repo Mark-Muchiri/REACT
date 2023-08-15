@@ -1,5 +1,5 @@
 * {
-  background: #282D35;
+  /* background: #282D35; */
   box-sizing: border-box;
   color: white;
 }
@@ -7,6 +7,8 @@
 body {
   margin: 0;
   font-family: Inter, sans-serif;
+  background: #282D35;
+  height: 100vh;
 }
 
 /* Nav container */
@@ -26,6 +28,12 @@ body {
   align-items: center;
   gap: 0.5rem;
   height: 90px;
+}
+
+.reacticon {
+  height: 30px;
+  margin-right: 7px;
+  background: #21222A;
 }
 
 .logotext {
@@ -64,7 +72,16 @@ those other properties)
 
 main {
   padding: 57px 27px;
+  background-image: url("./assets/react-icon-large.png");
+  background-repeat: no-repeat;
+  background-position: right 75%;
 }
+
+/* main > img {
+  position: absolute;
+  right: 0;
+  top: 38%;
+} */
 
 .maintitle {
   margin: 0;
@@ -77,12 +94,12 @@ main {
   max-width: 400px;
 }
 
-.mainfacts > li {
+.mainfacts>li {
   line-height: 19px;
   padding-block: 10px;
 }
 
-.mainfacts > li::marker {
+.mainfacts>li::marker {
   color: #61DAFB;
   font-size: 1.4rem;
 }
