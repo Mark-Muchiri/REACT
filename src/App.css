@@ -53,6 +53,7 @@ body {
   font-weight: 600;
 }
 
+/* Main container */
 
 main {
   padding: 57px 27px;
@@ -60,12 +61,6 @@ main {
   background-repeat: no-repeat;
   background-position: right 75%;
 }
-
-/* main > img {
-  position: absolute;
-  right: 0;
-  top: 38%;
-} */
 
 .maintitle {
   margin: 0;
