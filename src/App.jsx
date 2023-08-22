@@ -1,19 +1,31 @@
 import "./App.css";
-import Card from "./components/card/Card";
-import Hero from "./components/hero/Hero";
-import Navbar from "./components/nav/Navbar";
-/*
-Challenge: Build the Navbar component.
-Check the Figma file for the design specifics.
-*/
+import Jokes from "./components/Jokes";
 
 export default function App() {
 	return (
 		<>
-			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"></link>
-			<Navbar />
-			<Hero />
-			<Card />
+			<div className="container">
+				<Jokes
+					setup="1. If you don't pass in a 'question' prop, "
+					punchline="how might you make it only 
+				show the punchline"
+				/>
+				<Jokes
+					setup="2. If you don't pass in a 'question' prop, "
+					punchline="how might you make it only 
+				show the punchline"
+				/>
+				<Jokes
+					setup="3. If you don't pass in a 'question' prop, "
+					punchline="how might you make it only 
+				show the punchline"
+				/>
+				<Jokes
+					setup="4. If you don't pass in a 'question' prop, "
+					punchline="how might you make it only 
+				show the punchline"
+				/>
+			</div>
 		</>
 	);
 }
