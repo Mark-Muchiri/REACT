@@ -1,0 +1,90 @@
+.cards-position {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: -250px;
+}
+
+.card-container {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.image-container {
+    position: relative;
+    top: 0;
+    margin-bottom: -13px;
+}
+
+.soldout-container {
+    width: 61px;
+    height: 20px;
+    border-radius: 2px;
+    background: #FFF;
+    position: relative;
+    top: 2.7rem;
+    margin-left: 0.5rem;
+    top: 27px;
+}
+
+.soldout {
+    font-family: Poppins;
+    font-size: 10.24px;
+    color: #222;
+    line-height: 110%;
+    padding: 4px;
+    padding-left: 8px;
+}
+
+.card-image {
+    width: 176px;
+    height: 235px;
+    border-radius: 9px;
+}
+
+.rating-container {}
+
+.star {
+    width: 14px;
+}
+
+.R-number {
+    color: #222;
+    font-family: Poppins;
+    font-size: 13px;
+}
+
+.R-sidetext {
+    color: #918E9B;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+.text-container {
+    position: relative;
+    margin-top: -12px;
+}
+
+.lesson {
+    color: #222;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+.price {
+    position: relative;
+    margin-top: -12px;
+}
+
+.from {
+    font-weight: bold;
+    color: #222;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+.person {
+    color: #222;
+    font-family: Poppins;
+    font-size: 12px;
+}
