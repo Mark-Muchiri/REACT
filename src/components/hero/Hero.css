@@ -1,0 +1,37 @@
+.heroimg {
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.gallery {
+    width: 396px;
+    height: 232px;
+}
+
+.herotext {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: -120px;
+}
+
+.headhead {
+    font-family: Poppins;
+    font-size: 36px;;
+    line-height: 110%;
+    /* 39.6px */
+}
+
+.herop {
+    margin-top: -16px;
+    margin-left: -20px;
+    width: 320px;
+    color: #222;
+    font-family: Poppins;
+    line-height: 110%;
+    /* 17.6px */
+}
