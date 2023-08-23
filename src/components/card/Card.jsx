@@ -1,5 +1,4 @@
 import "./Card.css";
-// import star from "../../assets/star.png";
 import propTypes from "prop-types";
 
 export default function Card(props) {
@@ -27,7 +26,7 @@ export default function Card(props) {
 							<img className="star" src='../../../public/images/star.png' alt="" />{" "}
 							<a className="R-number">{props.rating}</a>{" "}
 							<a className="R-sidetext">
-								{props.reviewCount} - {props.country}
+								({props.reviewCount}) - {props.country}
 							</a>
 						</p>
 					</div>

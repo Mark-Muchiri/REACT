@@ -2,7 +2,7 @@ import "./App.css";
 import Card from "./components/card/Card";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/nav/Navbar";
-import './data/data'
+import cardData from "./data/data";
 
 // ! changed the country key to location
 /*
@@ -18,19 +18,29 @@ import './data/data'
 */
 
 export default function App() {
+	const data = cardData.map(function (info, index) {
+		return (
+			<Card
+				key={index}
+				img={info.coverImg}
+				rating={info.stats.rating}
+				reviewCount={info.stats.reviewCount}
+				country={info.location}
+				title={info.title}
+				price={info.price}
+			/>
+		);
+	});
+
 	return (
 		<>
-			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"></link>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+				rel="stylesheet"
+			></link>
 			<Navbar />
 			<Hero />
-			<Card
-				img='../public/images/katie-zaferes.png'
-				rating='5.0'
-				reviewCount='(6)'
-				country='USA'
-				title='Life Lessons with Katie Zaferes'
-				price='136'
-			/>
+			{data}
 		</>
 	);
 }
