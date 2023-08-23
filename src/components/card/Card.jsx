@@ -24,7 +24,7 @@ export default function Card(props) {
 							</div>
 						) : (
 							<div className="soldout-container">
-								<p className="soldout">Sold out</p>
+								<p className="soldout">SOLD OUT</p>
 							</div>
 						)}
 
