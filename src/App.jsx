@@ -2,18 +2,19 @@ import "./App.css";
 import Card from "./components/card/Card";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/nav/Navbar";
-// import cardimg from './assets/katie-zaferes.png'
+import './data/data'
 
+// ! changed the country key to location
 /*
-Challenge: Pass props to the Card component and display that data
+*	Challenge:
 
-- img ("katie-zaferes.png")
-- rating ("5.0")
-- reviewCount (6)
-- country (Whatever you want)
-- title ("Life Lessons with Katie Zaferes")
-- price (136)
+*	- import the array of data from data.js
+*	- map over the array to create <Card /> components
+*	- display the array of card components under the navbar
+*	(in place of the current <Card /> component)
 
+*	Note: We haven't styled the group of components yet, so they'll
+*	still be block elements, stacked vertically. We'll add styling later.
 */
 
 export default function App() {
