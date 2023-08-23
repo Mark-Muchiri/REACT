@@ -1,8 +1,7 @@
 .cards-position {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-left: -250px;
+    flex: 0 0 auto;
+    flex-direction: column;
 }
 
 .card-container {

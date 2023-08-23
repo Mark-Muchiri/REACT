@@ -18,16 +18,16 @@ import cardData from "./data/data";
 */
 
 export default function App() {
-	const data = cardData.map(function (info, index) {
+	const data = cardData.map(function (item, index) {
 		return (
 			<Card
 				key={index}
-				img={info.coverImg}
-				rating={info.stats.rating}
-				reviewCount={info.stats.reviewCount}
-				country={info.location}
-				title={info.title}
-				price={info.price}
+				img={item.coverImg}
+				rating={item.stats.rating}
+				reviewCount={item.stats.reviewCount}
+				country={item.location}
+				title={item.title}
+				price={item.price}
 			/>
 		);
 	});
@@ -40,7 +40,7 @@ export default function App() {
 			></link>
 			<Navbar />
 			<Hero />
-			{data}
+			<section className="card-list">{data}</section>
 		</>
 	);
 }

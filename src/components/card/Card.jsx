@@ -23,19 +23,21 @@ export default function Card(props) {
 					</div>
 					<div className="rating-container">
 						<p>
-							<img className="star" src='../../../public/images/star.png' alt="" />{" "}
-							<a className="R-number">{props.rating}</a>{" "}
+							<img
+								className="star"
+								src="../../../public/images/star.png"
+								alt=""
+							/>
+							<a className="R-number">{props.rating}</a>
 							<a className="R-sidetext">
 								({props.reviewCount}) - {props.country}
 							</a>
 						</p>
 					</div>
 					<div className="text-container">
-						<p className="lesson">
-							{props.title}
-						</p>
+						<p className="lesson">{props.title}</p>
 						<p className="price">
-							<a className="from">From ${props.price}</a>{" "}
+							<a className="from">From ${props.price}</a>
 							<a className="person">/ person</a>
 						</p>
 					</div>
