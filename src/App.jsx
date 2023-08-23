@@ -18,10 +18,10 @@ import cardData from "./data/data";
 */
 
 export default function App() {
-	const data = cardData.map(function (item, index) {
+	const data = cardData.map(function (item) {
 		return (
 			<Card
-				key={index}
+				key={item.id}
 				img={item.coverImg}
 				rating={item.stats.rating}
 				reviewCount={item.stats.reviewCount}
