@@ -9,6 +9,7 @@ export default function Card(props) {
 		country: propTypes.string.isRequired,
 		title: propTypes.string.isRequired,
 		price: propTypes.string.isRequired,
+		openSpots: propTypes.number.isRequired,
 	};
 
 	return (
@@ -16,9 +17,17 @@ export default function Card(props) {
 			<div className="cards-position">
 				<div className="card-container">
 					<div className="image-container">
-						<div className="soldout-container">
-							<p className="soldout">Sold out</p>
-						</div>
+						{/* ********* Conditional prop ********* */}
+						{props.openSpots >= 1 ? (
+							<div className="not-soldout-container">
+								<p className="not-soldout">{props.openSpots}</p>
+							</div>
+						) : (
+							<div className="soldout-container">
+								<p className="soldout">Sold out</p>
+							</div>
+						)}
+
 						<img className="card-image" src={props.img} alt="" />
 					</div>
 					<div className="rating-container">
