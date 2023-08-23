@@ -1,8 +1,30 @@
 import "./Card.css";
-import cardimg from "../../assets/katie-zaferes.png";
-import star from "../../assets/star.png";
+// import star from "../../assets/star.png";
+import propTypes from "prop-types";
 
-export default function Card() {
+// ! changed the country key to location
+/*
+*	Challenge:
+
+*	- import the array of data from data.js
+*	- map over the array to create <Card /> components
+*	- display the array of card components under the navbar
+*	(in place of the current <Card /> component)
+
+*	Note: We haven't styled the group of components yet, so they'll
+*	still be block elements, stacked vertically. We'll add styling later.
+*/
+
+export default function Card(props) {
+	Card.propTypes = {
+		img: propTypes.string.isRequired,
+		rating: propTypes.string.isRequired,
+		reviewCount: propTypes.string.isRequired,
+		country: propTypes.string.isRequired,
+		title: propTypes.string.isRequired,
+		price: propTypes.string.isRequired,
+	};
+
 	return (
 		<>
 			<div className="cards-position">
@@ -11,21 +33,23 @@ export default function Card() {
 						<div className="soldout-container">
 							<p className="soldout">Sold out</p>
 						</div>
-						<img className="card-image" src={cardimg} alt="" />
+						<img className="card-image" src={props.img} alt="" />
 					</div>
 					<div className="rating-container">
 						<p>
-							<img className="star" src={star} alt="" />{" "}
-							<a className="R-number">5.0</a>{" "}
-							<a className="R-sidetext">(6) - USA</a>{" "}
+							<img className="star" src='../../../public/images/star.png' alt="" />{" "}
+							<a className="R-number">{props.rating}</a>{" "}
+							<a className="R-sidetext">
+								{props.reviewCount} - {props.country}
+							</a>
 						</p>
 					</div>
 					<div className="text-container">
 						<p className="lesson">
-							Life lessons with Katie Zaferes
+							{props.title}
 						</p>
 						<p className="price">
-							<a className="from">From $136</a>{" "}
+							<a className="from">From ${props.price}</a>{" "}
 							<a className="person">/ person</a>
 						</p>
 					</div>

@@ -1,11 +1,11 @@
 import "./Hero.css";
-import gallery from '../../assets/photo-grid.png'
+// import gallery from '../../assets/photo-grid.png'
 
 export default function Hero() {
 	return (
 		<>
             <div className="heroimg">
-                <img className="gallery" src={gallery} alt="top gallery image" />
+                <img className="gallery" src='../../../public/images/photo-grid.png' alt="top gallery image" />
             </div>
             <div className="herotext">
                 <h2 className="headhead">Online Experiences</h2>

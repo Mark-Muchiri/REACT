@@ -2,6 +2,7 @@ import "./App.css";
 import Card from "./components/card/Card";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/nav/Navbar";
+// import cardimg from './assets/katie-zaferes.png'
 
 /*
 Challenge: Pass props to the Card component and display that data
@@ -21,7 +22,14 @@ export default function App() {
 			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"></link>
 			<Navbar />
 			<Hero />
-			<Card />
+			<Card
+				img='../public/images/katie-zaferes.png'
+				rating='5.0'
+				reviewCount='(6)'
+				country='USA'
+				title='Life Lessons with Katie Zaferes'
+				price='136'
+			/>
 		</>
 	);
 }
