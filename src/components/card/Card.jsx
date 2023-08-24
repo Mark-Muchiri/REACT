@@ -11,14 +11,8 @@ export default function Card(props) {
 		price: propTypes.string.isRequired,
 		openSpots: propTypes.number.isRequired,
 		location: propTypes.string.isRequired,
+		status: propTypes.string.isRequired,
 	};
-
-	let badgeText;
-	if (props.openSpots === 0) {
-		badgeText = "SOLD OUT";
-	} else if (props.location === "Online") {
-		badgeText = "ONLINE";
-	}
 
 	return (
 		<>
@@ -26,19 +20,17 @@ export default function Card(props) {
 				<div className="card-container">
 					<div className="image-container">
 						{/* ********* Conditional prop ********* */}
-						{/* {props.openSpots >= 1 ? (
+						{props.status === "online" && props.openSpots >= 1 ? (
+							<div className="online-container">
+								<p className="online">ONLINE</p>
+							</div>
+						) : props.openSpots >= 1 ? (
 							<div className="not-soldout-container">
 								<p className="not-soldout">{props.openSpots}</p>
 							</div>
 						) : (
 							<div className="soldout-container">
 								<p className="soldout">SOLD OUT</p>
-							</div>
-						)} */}
-						{/* Online condition */}
-						{badgeText && (
-							<div className="soldout-container">
-								<p className="soldout"> {badgeText}</p>
 							</div>
 						)}
 
