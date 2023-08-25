@@ -3,30 +3,37 @@ import propTypes from "prop-types";
 
 export default function Card(props) {
 	Card.propTypes = {
-		img: propTypes.string.isRequired,
-		rating: propTypes.string.isRequired,
-		reviewCount: propTypes.string.isRequired,
-		country: propTypes.string.isRequired,
-		title: propTypes.string.isRequired,
-		price: propTypes.string.isRequired,
-		openSpots: propTypes.number.isRequired,
-		location: propTypes.string.isRequired,
-		status: propTypes.string.isRequired,
+		item: propTypes.shape({
+			coverImg: propTypes.string.isRequired,
+			country: propTypes.string.isRequired,
+			title: propTypes.string.isRequired,
+			price: propTypes.string.isRequired,
+			openSpots: propTypes.number.isRequired,
+			location: propTypes.string.isRequired,
+			status: propTypes.string.isRequired,
+			stats: propTypes.shape({
+				rating: propTypes.string.isRequired,
+				reviewCount: propTypes.string.isRequired,
+			}).isRequired,
+		}).isRequired,
 	};
-
+console.log(props.item);
 	return (
 		<>
 			<div className="cards-position">
 				<div className="card-container">
 					<div className="image-container">
 						{/* ********* Conditional prop ********* */}
-						{props.status === "online" && props.openSpots >= 1 ? (
+						{props.item.status === "online" &&
+						props.item.openSpots >= 1 ? (
 							<div className="online-container">
 								<p className="online">ONLINE</p>
 							</div>
-						) : props.openSpots >= 1 ? (
+						) : props.item.openSpots >= 1 ? (
 							<div className="not-soldout-container">
-								<p className="not-soldout">{props.openSpots}</p>
+								<p className="not-soldout">
+									{props.item.openSpots}
+								</p>
 							</div>
 						) : (
 							<div className="soldout-container">
@@ -34,7 +41,11 @@ export default function Card(props) {
 							</div>
 						)}
 
-						<img className="card-image" src={props.img} alt="" />
+						<img
+							className="card-image"
+							src={props.item.coverImg}
+							alt=""
+						/>
 					</div>
 					<div className="rating-container">
 						<p>
@@ -43,16 +54,17 @@ export default function Card(props) {
 								src="../../../public/images/star.png"
 								alt=""
 							/>
-							<a className="R-number">{props.rating}</a>
+							<a className="R-number">{props.item.stats.rating}</a>
 							<a className="R-sidetext">
-								({props.reviewCount}) - {props.country}
+								({props.item.stats.reviewCount}) -{" "}
+								{props.item.location}
 							</a>
 						</p>
 					</div>
 					<div className="text-container">
-						<p className="lesson">{props.title}</p>
+						<p className="lesson">{props.item.title}</p>
 						<p className="price">
-							<a className="from">From ${props.price}</a>
+							<a className="from">From ${props.item.price}</a>
 							<a className="person">/ person</a>
 						</p>
 					</div>

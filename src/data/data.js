@@ -6,7 +6,7 @@ export default [
         price: 136,
         coverImg: "/images/katie-zaferes.png",
         stats: {
-            rating: 5.0,
+            rating: 4.4,
             reviewCount: 6
         },
         location: "U.S.A",
@@ -20,7 +20,7 @@ export default [
         price: 125,
         coverImg: "/images/wedding-photography.png",
         stats: {
-            rating: 5.0,
+            rating: 4.6,
             reviewCount: 30
         },
         location: "Scotland",
