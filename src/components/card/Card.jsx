@@ -17,13 +17,15 @@ export default function Card(props) {
 			}).isRequired,
 		}).isRequired,
 	};
-console.log(props.item);
+	console.log(props);
+	console.log(props.item);
 	return (
 		<>
 			<div className="cards-position">
 				<div className="card-container">
 					<div className="image-container">
 						{/* ********* Conditional prop ********* */}
+						{/* This provides functionality for the badges */}
 						{props.item.status === "online" &&
 						props.item.openSpots >= 1 ? (
 							<div className="online-container">
@@ -54,9 +56,11 @@ console.log(props.item);
 								src="../../../public/images/star.png"
 								alt=""
 							/>
-							<a className="R-number">{props.item.stats.rating}</a>
+							<a className="R-number">
+								{props.item.stats.rating}
+							</a>
 							<a className="R-sidetext">
-								({props.item.stats.reviewCount}) -{" "}
+								({props.item.stats.reviewCount}) -
 								{props.item.location}
 							</a>
 						</p>
