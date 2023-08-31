@@ -17,8 +17,8 @@ export default function Card(props) {
 			}).isRequired,
 		}).isRequired,
 	};
-	console.log(props);
-	console.log(props.item);
+	// console.log(props);
+	// console.log(props.item);
 	return (
 		<>
 			<div className="cards-position">
