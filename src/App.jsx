@@ -5,6 +5,7 @@ import Navbar from "./components/nav/Navbar";
 import cardData from "./data/data";
 
 export default function App() {
+	// This maps through app the objects in the cardData
 	const data = cardData.map((item) => {
 		// key={item.id} is just there to avoid a react error
 		return <Card key={item.id} item={item} />;
