@@ -12,7 +12,7 @@ export default function App() {
 	});
 	// This consoles all the data that's presented in `const = data`
 	// Tip: To see the console.log in vscode, use the extension 'Console Ninja'
-	console.log(data);
+	// console.log(data);
 
 	return (
 		<>
