@@ -2,6 +2,7 @@ import "./Card.css";
 import propTypes from "prop-types";
 
 export default function Card(props) {
+	// Props validation
 	Card.propTypes = {
 		item: propTypes.shape({
 			coverImg: propTypes.string.isRequired,
@@ -17,6 +18,7 @@ export default function Card(props) {
 			}).isRequired,
 		}).isRequired,
 	};
+	// These are for testing the props being received 
 	// console.log(props);
 	// console.log(props.item);
 	return (
